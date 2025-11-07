@@ -1,166 +1,276 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-
-    <title>스파르타코딩클럽 | 부트스트랩 연습하기</title>
+    <title>Page Title</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lato&family=Nanum+Brush+Script&family=Nanum+Myeongjo:wght@400;700&display=swap');
-
         * {
-            font-family: 'Lato', sans-serif;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "맑은 고딕";
         }
 
-        .mytitle {
-            background-color: green;
-            color: white;
-            height: 250px;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://movie-phinf.pstatic.net/20210715_95/1626338192428gTnJl_JPEG/movie_image.jpg');
-            background-position: center;
-            background-size: cover;
+        ul, ol, li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
-        .mytitle>button {
-            width: 250px;
-            height: 50px;
-
-            background-color: transparent;
-
-            border: 1px solid white;
-            color: white;
-
-            border-radius: 50px;
-            border: 1px solid white;
-
-            margin-top: 20px;
+        header {
+            width: 1185px;
+            height: 160px;
+            margin: 0 auto;
         }
 
-        .mytitle>button :hover {
-            border: 2px solid white;
+        #logo {
+            width: 170px;
+            height: 70px;
+            float: left;
+            margin: 0px 0 0 20px;
         }
 
-        .mycomment {
+        #login {
+            width: 295px;
+            height: 30px;
+            float: right;
+            margin: 20px 30px 0 0px;
+        }
+
+        #login ul {
+            font-size: 12px;
+            color: #666;
+        }
+
+        #login li {
+            float: left;
+            margin: 0 5px;
+        }
+
+        #login li a {
+            text-decoration: none;
+            color: #666;
+        }
+
+        header {
+            width: 1185px;
+            height: 160px;
+            margin: 0 auto;
+        }
+
+        nav {
+            width: 780px;
+            height: 40px;
+            float: right;
+            margin: 40px 0px 0 0px;
+        }
+
+        nav>ul {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        nav>ul>li {
+            float: left;
+            margin: 0 40px;
+        }
+
+        nav>ul>li>a {
+            text-decoration: none;
+            color: midnightblue;
+        }
+
+        nav>ul>li>a:hover {
+            color: mediumaquamarine;
+        }
+
+        #slider {
+            width: 1475px;
+            height: 560px;
+            margin: 0 auto;
+        }
+
+        #slider>img {
+            width: 20%;
+            height: 20%;
+        }
+
+        .banner-text {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 30px 0;
             color: gray;
         }
 
-        .mycards {
-            width: 1200px;
-            margin: 20px auto 20px auto;
-        }
-        .mypost{
-            width: 500px;
-            margin: 20px auto 20px auto;
-            padding: 20px 20px 20px 20px;
-
-            box-shadow: 0px 0px 3px 0px gray;
-            
-        }
-
-        .mybtn{
+        ul.product-list {
+            list-style: none;
+            padding: 0;
+            margin: 50px auto;
             display: flex;
-            flex-direction: row;
-            align-items: center;
             justify-content: center;
-
-            margin-top: 20px;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
         }
 
-        .mybtn > button {
-            margin-right: 10px;
+        li.product-item {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            list-style-type: none;
+        }
+
+        li.product-item:hover {
+            transform: scale(1.05);
+        }
+
+        li.product-item img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .price {
+            font-size: 13px;
+            font-weight: bold;
+            color: gray;
+            margin: 18px 0;
+            margin-left: 150px;
+        }
+
+        footer {
+            background: #fff;
+            color: #666 padding 20px 0;
+        }
+
+        footer ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+        }
+
+        footer li a {
+            color: #666;
+            font-size: 12px;
+        }
+
+        footer {
+            width: 100%;
+            height: 145px;
+            border-top: 1px solid #666;
+            margin: 0 auto;
         }
     </style>
-<!-- */1-17부터 들으면 됨 -->
 </head>
 
-<body>
-    <div class="mytitle">
-        <h1>내 생애 최고의 영화들!!</h1>
-        <button>영화 기록하기</button>
+<header>
+    <div id="logo"><img src="img/logo.png"></div>
+    <div id="login">
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li>|</li>
+            <li><a href="#">회원가입</a></li>
+            <li>|</li>
+            <li><a href="#">Q & A </a></li>
+            <li>|</li>
+            <li><a href="#">LANGUAGE</a></li>
+        </ul>
     </div>
-    <div class="mypost">
-        <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">영화URL</label>
-        </div>
-        <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea">코멘트</label>
-        </div>
-        <div class="mybtn">
-            <button type="button" class="btn btn-dark">기록하기</button>
-            <button type="button" class="btn btn-outline-dark">닫기</button>
+    <nav>
+        <ul>
+            <li><a href="#">데크</a></li>
+            <li><a href="#">바인딩</a> </li>
+            <li><a href="#">고글/부츠/헬멧</a></li>
+            <li><a href="#">상품검색</a></li>
+            <li><a href="#">고객문의</a></li>
+        </ul>
+    </nav>
+</header>
 
-        </div>
+<div id="slider">
+    <a href="#">
+        <img src="img/베너.jpg" alt="메인 배너">
+    </a>
+</div>
+
+<body>
+    <div class="banner-text">
+        <p>❄️ 25 / 26 시즌 신상품 ❄️</p>
     </div>
-    <div class="mycards">
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
-                <div class="card h-100">
-                    <img src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">영화 제목이 들어갑니다.</h5>
-                        <p class="card-text">여기에 영화 제목이 들어갑니다.</p>
-                        <p> ⭐⭐⭐</p>
-                        <p class="mycomment">여기에 나의 의견을 쓰면 되겠죠</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">영화 제목이 들어갑니다.</h5>
-                        <p class="card-text">여기에 영화 제목이 들어갑니다.</p>
-                        <p> ⭐⭐⭐</p>
-                        <p class="mycomment">여기에 나의 의견을 쓰면 되겠죠</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">영화 제목이 들어갑니다.</h5>
-                        <p class="card-text">여기에 영화 제목이 들어갑니다.</p>
-                        <p> ⭐⭐⭐</p>
-                        <p class="mycomment">여기에 나의 의견을 쓰면 되겠죠</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">영화 제목이 들어갑니다.</h5>
-                        <p class="card-text">여기에 영화 제목이 들어갑니다.</p>
-                        <p> ⭐⭐⭐</p>
-                        <p class="mycomment">여기에 나의 의견을 쓰면 되겠죠</p>
-                    </div>
-                </div>
-            </div>
+
+    <ul class="product-list">
+
+        <li class="product-item">
+            <a href="detail1.html"><img src="img/데크1.jpg" alt="상품1"></a>
+            <div class="price"> price: 19,900원</div>
+        </li>
+        <li class="product-item">
+            <a href="detail2.html"><img src="img/데크2.jpg" alt="상품2"></a>
+            <div class="price"> price: 29,900원</div>
+        </li>
+        <li class="product-item">
+            <a href="detail3.html"><img src="img/부츠1.jpg" alt="상품3"></a>
+            <div class="price"> price: 39,900원</div>
+        </li>
+        <li class="product-item">
+            <a href="detail4.html"><img src="img/부츠2.jpg" alt="상품4"></a>
+            <div class="price">price: 49,900원</div>
+        </li>
+
+        <li class="product-item">
+            <a href="detail5.html"><img src="img/바인딩.jpg" alt="상품5"></a>
+            <div class="price">price: 59,900원</div>
+        </li>
+        <li class="product-item">
+            <a href="detail6.html"><img src="img/헬멧.jpg" alt="상품6"></a>
+            <div class="price">price: 69,900원</div>
+        </li>
+        <li class="product-item">
+            <a href="detail7.html"><img src="img/장갑.jpg" alt="상품7"></a>
+            <div class="price">price: 79,900원</div>
+        </li>
+        <li class="product-item">
+            <a href="detail8.html"><img src="img/고글.jpg" alt="상품8"></a>
+            <div class="price">price: 89,900원</div>
+        </li>
+    </ul>
+
+    <footer>
+        <div id="box">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li>|</li>
+                <li><a href="#">BUSINESS PRACTICE OFFICE</a></li>
+                <li>|</li>
+                <li><a href="#">COPYRIGHT</a></li>
+                <li>|</li>
+                <li><a href="#">CONTACT US</a></li>
+                <li>|</li>
+                <li><a href="#">SITEMAP</a></li>
+                <li>|</li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li>|</li>
+                <li><a href="#"><a href="#">Fiat Chrysler Automobiles (FCA)</a></li>
+                <li>|</li>
+                <li><a href="#">Chrysler</a></li>
+                <li>|</li>
+                <li><a href="#">FIAT®</a></li>
+                <li>|</li>
+            </ul>
         </div>
-    </div>
 </body>
 
 </html>
-
-
-<body>
